@@ -43,7 +43,7 @@ function Mahasiswa(nama, usia, energi){
     this.nama = nama
     this.usia = usia
     this.energi = energi 
-    this.makan = function(porsi){
+    this.makan = (porsi) => {
         this.energi += porsi
         console.log(`energi anda bertambah ${this.energi}`)
     }
