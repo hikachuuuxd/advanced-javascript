@@ -33,3 +33,20 @@ let hasil = angka.filter(a => a > 5).map(a => a * 3).reduce((e, i) => e + i)
 console.log(hasil)
 
 // Study Kasus
+const videos = Array.from(document.querySelectorAll('[data-duration]'))
+let js = videos.filter(video => video.textContent.includes('JAVASCRIPT LANJUTAN'))
+        .map(duration => duration.dataset.duration).map(time => {
+            const parts = time.split(':').map(part => parseFloat(part))
+            return (parts[0] * 60) + parts[1]
+        }).reduce((total, detik) => total + detik)
+
+const jam = Math.round(js / 3600)
+js = js - jam * 3600
+const menit = Math.round(js / 60)
+const detik = js - menit * 60
+
+const durasi = document.querySelector('.total-durasi')
+durasi.innerHTML = `${jam} jam ${menit} menit ${detik} detik`
+const jmlVideo  = document.querySelector('.jumlah-video')
+const total = videos.filter(data => data.innerHTML.includes('JAVASCRIPT LANJUTAN')).length
+jmlVideo.innerHTML = `${total} vidio`
