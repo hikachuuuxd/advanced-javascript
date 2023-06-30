@@ -1,0 +1,18 @@
+[
+    {
+        "nama": "Nisrina", 
+        "kelas": "XII RPL 1", 
+        "absen": 24
+    }, 
+    {
+        "nama": "Hikari", 
+        "kelas": "XII RPL 3", 
+        "absen": 20
+        
+    },
+    {
+        "nama": "Asagiri", 
+        "kelas": "XII RPL 2", 
+        "absen": 28
+    }
+]
