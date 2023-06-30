@@ -54,3 +54,29 @@ function getId({id}){
 }
 
 console.log(getId(mhs))
+
+// Destructuring function
+// return value
+function operasi(a, b){
+    return [a + b, a * b]
+}
+const [tambah, kali] = operasi(4, 6)
+console.log(tambah);
+
+// function argumen
+const abal = {
+    nilai: 1, 
+    akreditasi: 'A', 
+    lokasi: 'Surabaya',
+    mahasiswa: {
+        satu: 'Lalapoo',
+        dua: 'Tingki', 
+        tiga: 'Dipsi'
+    }
+}
+
+function cetakAbal({akreditasi, lokasi, mahasiswa:{satu, dua, tiga}}){
+    return `abal ini terakreditasi ${akreditasi}, dan berlokasi di ${lokasi} dam memiliki mahasiswa yaitu ${satu}, ${dua}, ${tigag}`
+};
+
+console.log(cetakAbal(abal));
