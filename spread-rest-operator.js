@@ -20,3 +20,11 @@ const single = [...text.textContent].map(e => `<span>${e}</span>`).join('')
 text.innerHTML = single
 console.log(single)
 
+const angka = 35
+console.log(typeof angka)
+
+function cari(tipe, ...values){
+    return values.filter(e => typeof e === tipe)
+}
+
+console.log(cari('number', '1', 'aku', 4, 5, true, false, 9, 'kamu'))

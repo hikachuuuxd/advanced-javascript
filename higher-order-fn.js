@@ -1,12 +1,16 @@
-// Membuat function sebagai argumen 
-// callback function yang disimpan sebagai argumen
-// function yang memiliki callback disebut higher order function
-// function yang mereturn function jg disebuat higher order function
+/* 
+Fungsi :
+Membuat function sebagai argumen 
+callback function yang disimpan sebagai argumen
+function yang memiliki callback disebut higher order function
+function yang mereturn function jg disebuat higher order function
+*/ 
 
 
-// Tujuan 
-// 1. Abstraksi = program dipisahkan dalam function  - function 
-// 2. Pendekatan paradigma functional Programming
+/* Tujuan 
+ 1. Abstraksi = program dipisahkan dalam function  - function 
+ 2. Pendekatan paradigma functional Programming
+*/
 // contoh
 
 function repeat(n, action){
