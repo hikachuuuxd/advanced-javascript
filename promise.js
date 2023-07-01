@@ -1,7 +1,10 @@
-/* Objet yang merepresentasikan keberhasilan/kegagalan sebuah event yang asych di masa yang akan datang
+/* 
+Promise 
+Objet yang merepresentasikan keberhasilan/kegagalan sebuah event yang asych di masa yang akan datang
  callback : resolve (terpenuhi), reject (tidak terpenuhi), finally ()
  callback finally : biasa digunakan untuk ketika ada fitur loading finally akan dijalankan ketika loding selesai
  aksi : then (terpenuhi), catch (tidak terpenuhi)
+
 */
 
 // contoh 1
