@@ -22,6 +22,7 @@ const siswa = [
     }
 ]
 
+
 // sync 
 console.log('mulai')
 siswa.forEach(e => console.log(e.nama))
@@ -38,3 +39,5 @@ $.ajax({
         console.log(e.responseText)
     }
 })
+
+
