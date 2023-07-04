@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <style>
+    .counter{
+      padding: 1em;
+      width: 200px;
+      background-color: darkgrey;
+      box-sizing: border-box;
+
+
+    }
+    .button{
+      margin: 2em;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+
+    .reset button{
+      width: 100px;
+    }
+
+
+  </style>
+  <body>
+    <div id="root"></div>
+    
+<script type="text/babel">
+
+   const Counter = () =>{
+      const [val, setValue] = React.useState(0)
+      function tambah(){
+        setValue(val + 1)
+      }
+      
+      function kurang(){
+        setValue(val - 1)
+      }
+
+      function reset(){
+        setValue(0)
+      }
+      
+      return(
+        <div className="counter">
+        {val == 0 ? <Button  fungsi={kurang} status="disabled" content="-" /> : <Button  fungsi={kurang} content="-" />}
+          <span>{val}</span>
+        {val == 10 ? <Button fungsi={tambah} status="disabled" content="+" /> : <Button fungsi={tambah} content="+" /> }
+          <div className="reset">
+        {val == 0 ?  <Button fungsi={reset} status="disabled" content="reset" /> : <Button fungsi={reset} content="reset" />}
+
+        </div>
+        </div>
+      )
+    }
+    const Button = ({content, fungsi, status}) =>{
+      return <button disabled={status ? status : ""} className="button" onClick={fungsi} >{content ? content : "button"}</button>
+    }
+
+
+      function Title(){
+        return <p>ini adalah komponen bersarang</p>
+      }
+
+      function Start({title})
+      {
+        return <h1>{title ? title : 'Hello World'}</h1>
+      }
+      
+      function Image({image})
+      {
+        return <img src={image ? image : "image/mevicone.png" } alt=""/>
+      }
+      
+      function MyApp()
+      {
+        const hobbys = ['membaca', 'menulis', 'makan', 'minum', 'menonton anime']
+        const [like, setLike] = React.useState(0)
+
+        function tambahLike(){
+          setLike(like + 1)
+        }
+        return(
+          <>
+            <ul>
+              {
+                hobbys.map(hobby =>
+              (
+                <li key={hobby} >{hobby}</li>
+                ))
+              }
+              
+              </ul>
+
+              <button onClick={tambahLike}>{like}</button>
+
+              <Title />
+              <Start title="Hai ini adalah Props title"/>
+              <Start />
+              <Image image="image/pramuka.png"/>
+              <Image />
+              </>
+              
+              ) 
+            }
+
+            const container = document.getElementById('root');
+            const root = ReactDOM.createRoot(container);
+            root.render(<Counter />) 
+</script>
+  </body>
+</html>
